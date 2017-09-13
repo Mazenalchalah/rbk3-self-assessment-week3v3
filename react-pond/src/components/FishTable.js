@@ -1,12 +1,15 @@
 var FishTable = () => (
   <table>
     <tbody>
-      <FishTableRow table={window.fishData}/>
+    {
+    	props.fishes.map((fish)=>
+    		<FishTableRow fish={fish}/>)
+    }
       
     </tbody>
   </table>
+    
 );
-//ReactDOM.render(<FishTable />, document.getElementById("app"));
 
 // PropTypes tell other developers what `props` a component expects
 // Warnings will be shown in the console when the defined rules are violated
